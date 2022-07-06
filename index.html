@@ -19,10 +19,14 @@ background-color: #000000;
 .vid {
 z-index: 0;
 position: absolute;
-width: 1366px;
-height: 768px;
+width: 500px;
+height: 281.25px;
 left: 0px;
 top: 0px;
+}
+.json {
+position: absolute;
+display : none;
 }
 </style>  	
 	
@@ -33,6 +37,8 @@ top: 0px;
 <video class="vid" id="vid">
   <source src="" />
 </video> 
+
+<div style="display: none" class="json" id="json">json here</div>
 
 <script type="text/javascript">
     setInterval(function() { 
