@@ -41,13 +41,27 @@ color: white;
 font-size: 19px;
 cursor: pointer;
 }
+.myButton2 {
+z-index: 90;
+position: absolute;
+left: 50px;
+top: 10px;
+width: 30px;
+height: 30px;
+background-color: #2F4F4F;
+border: none;
+color: white; 
+font-size: 19px;
+cursor: pointer;
+}
 </style>  	
 	
 </head>
 	
 <body>
 
-<button class="myButton1" id="myButton1" type="button"><i class="fa fa-play-circle" aria-hidden="true"></i></button>  
+<button class="myButton1" id="myButton1" type="button"><i class="fa fa-play" aria-hidden="true"></i></button>  
+<button class="myButton2" id="myButton2" type="button"><i class="fa fa-pause" aria-hidden="true"></i></button>  
 
 <video class="vid" id="vid" controls>
   <source src="http://stream.voidboost.cc/8/4/0/5/9/d3a04dc521b7401d0dfe445f476a6618:2022070722:NXJyZThLbFNyODdvRmpZck0wamVVUmZpR3ZPelM4d3NJMUFHc29DT2JiOEN1eG9LdThWbWZIdStvNzMyTmZ3ZUhPTFRFU2p4WEZ0MVFhSGg0aWhVb2ZGQm51Tkk2K05oeGp6dnRHeDNKdjA9/dviae.mp4" />
@@ -68,6 +82,11 @@ cursor: pointer;
 <script type="text/javascript">
 document.querySelector('#myButton1').addEventListener('click', function(){
 document.getElementById('play').value = '1';
+});
+</script>
+<script type="text/javascript">
+document.querySelector('#myButton2').addEventListener('click', function(){
+document.getElementById('play').value = '0';
 });
 </script>
 	
