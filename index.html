@@ -94,6 +94,9 @@ var p13 = p12.lastElementChild;
 var p14 = p13.innerHTML;
 var p15 = p13.previousElementSibling;
 var p16 = p15.innerHTML;
+	
+
+	
   if (p14 != p5 || p9 != p16) {
   if (p5 == 0) {
   vid.pause();
@@ -134,7 +137,13 @@ document.getElementById('sinh').value = '1';
 	
 <script type="text/javascript">
 setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbzMZJGEC1l3GD2O-EHEviGWe_JpH37OzxVuSiT6SsWOusdzpkQ/exec"+ "?" + "p3=1", { method: "GET", headers:{"content-type":"application/x-www-form-urlencoded"} }) }, 1500);
-setInterval(function() {   
+setInterval(function() { 
+var date = new Date();
+var ch = date.getHours() * 60 * 60 * 1000;
+var min = date.getMinutes() * 60 * 1000;
+var sec = date.getSeconds() * 1000;
+var milsec = date.getMilliseconds();
+var vrem = ch + min + sec + milsec;	
 var t7 = vid.currentTime;
 var t8 = document.getElementById('emylast').value;
 if (document.getElementById('timeotp').value == 0 & document.getElementById('massiv').value == 1) {
@@ -159,7 +168,7 @@ if (t8 != t6 || document.getElementById('per').value == 1 || document.getElement
 if (document.getElementById('otpravka').value == 1) {
 } else {
 if (document.getElementById('timeotp').value == 0) {
-fetch("https://script.google.com/macros/s/AKfycbzMZJGEC1l3GD2O-EHEviGWe_JpH37OzxVuSiT6SsWOusdzpkQ/exec"+ "?" + "p1=" + t7 + "&p2=" + t6,
+fetch("https://script.google.com/macros/s/AKfycbzMZJGEC1l3GD2O-EHEviGWe_JpH37OzxVuSiT6SsWOusdzpkQ/exec"+ "?" + "p1=" + t7 + "&p2=" + t6 + "&p4=" + vrem,
     { 
 	method: "GET", 
 	headers:{"content-type":"application/x-www-form-urlencoded"} 
