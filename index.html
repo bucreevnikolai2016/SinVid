@@ -90,6 +90,16 @@ top: 15px;
 z-index: 90;
 width: 70px;
 }
+.slidecontainer2 {
+z-index: 90;
+position: absolute;
+left: 170px;
+top: 15px;
+}
+.slider2 {
+z-index: 90;
+width: 200px;
+}
 </style>  	
 	
 <script>
@@ -110,6 +120,11 @@ document.getElementById("myRange").style.display = '';
 <div class="slidecontainer" id="slidecontainer">
   <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
   <p id="pp" style="display: none">Volume: <span id="demo" style="display: none"></span></p>
+</div>
+	
+<div class="slidecontainer2" id="slidecontainer2">
+  <input type="range" min="0" max="" value="0" class="slider2" id="myRange2">
+  <p id="pp2" style="display: none">Volume: <span id="demo2" style="display: none"></span></p>
 </div>
 
 <video class="vid" id="vid" controls>
@@ -144,6 +159,25 @@ var input = document.getElementById("demo");
 var text = input.innerHTML;
 var v1 = text / 100;
 vid.volume = v1; 
+} 
+}, 300);
+</script>
+	
+<script>
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = slider2.value;
+slider2.oninput = function() {
+output2.innerHTML = this.value;
+}
+</script>
+
+<script type="text/javascript">
+setInterval(function() {
+if (document.getElementById("demo2")) {
+var input2 = document.getElementById("demo2");
+var text2 = input2.innerHTML;
+var v12 = text2 / 100;
 } 
 }, 300);
 </script>
