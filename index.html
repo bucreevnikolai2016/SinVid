@@ -48,7 +48,8 @@ display : none;
 <input id="sinh" style="display: none" name="sinh" value="0"/> 
 <input id="massiv" style="display: none" name="massiv" value=""/> 
 <input id="block" style="display: none" name="block" value=""/> 
-
+<input id="block2" style="display: none" name="block2" value=""/> 
+	
 <script type="text/javascript">
     setInterval(function() { 
        var id = '1phPekCXWUAwnmWYzdmt0llykr0KR64rgXdWnx7mOLSw';
@@ -98,19 +99,22 @@ var p16 = p15.innerHTML;
 var p17 = p6.previousElementSibling;
 var p18 = p17.innerHTML;	
 var p19 = document.getElementById('block').value;
+var p20 = document.getElementById('block2').value;
+if (p20 != p18) {
 if (p19 != p18) {
   if (p14 != p5 || p9 != p16) {
   if (p5 == 0) {
   vid.pause();
   vid.currentTime = p9;
-  document.getElementById('block').value = p18;
+  document.getElementById('block2').value = p18;
   } 
   if (p5 == 1) {
   vid.play();
   vid.currentTime = p9;
-  document.getElementById('block').value = p18;
+  document.getElementById('block2').value = p18;
   }
   }
+}
 }
 }
           }, 10);
