@@ -235,12 +235,10 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 async function delayedGreeting() {
-  var input = document.getElementById("demo2");
-  var text = input.innerHTML;
+  var text = document.getElementById("myRange2").value;
   var t1 = text;
   await sleep(50);
-  var input = document.getElementById("demo2");
-  var text = input.innerHTML;
+  var text = document.getElementById("myRange2").value;
   var t2 = text;
   var t3 = t1 - t2;
   var t4 = Math.abs(t3);
@@ -274,8 +272,7 @@ var min = date.getMinutes() * 60 * 1000;
 var sec = date.getSeconds() * 1000;
 var milsec = date.getMilliseconds();
 var vrem = ch + min + sec + milsec;
-var input = document.getElementById("demo2");
-var text = input.innerHTML;	
+var text = document.getElementById("myRange2").value;	
 var t7 = text;
 var t8 = document.getElementById('emylast').value;
 if (document.getElementById('timeotp').value == 0 & document.getElementById('massiv').value == 1) {
