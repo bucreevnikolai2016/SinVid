@@ -100,16 +100,20 @@ var p17 = p6.previousElementSibling;
 var p18 = p17.innerHTML;	
 var p19 = document.getElementById('block').value;
 var p20 = document.getElementById('block2').value;
+if (p19 != p18) {
   if (p14 != p5 || p9 != p16) {
   if (p5 == 0) {
   vid.pause();
   vid.currentTime = p9;
+  document.getElementById('block').value = p18;
   } 
   if (p5 == 1) {
   vid.play();
   vid.currentTime = p9;
+  document.getElementById('block').value = p18;
   }
   }
+}
 }
           }, 10);
     </script> 
@@ -179,7 +183,6 @@ fetch("https://script.google.com/macros/s/AKfycbzMZJGEC1l3GD2O-EHEviGWe_JpH37Ozx
 document.getElementById('timeotp').value = '1';
 setTimeout(() => { document.getElementById('timeotp').value = '0';}, 1500);
 document.getElementById('massiv').value = '0';
-document.getElementById('block').value = vrem;
 } else {
 document.getElementById('massiv').value = '1';
 }
