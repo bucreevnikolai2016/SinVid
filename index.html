@@ -184,7 +184,7 @@ var v12 = text2 / 100;
 
 <script>
 setInterval(function() {
-if (document.getElementById('play').value == 1) {
+if (!vid.paused) {
 document.getElementById("myRange2").value = Math.round(document.getElementById("myRange2").value) + 1;
 }
 }, 1000);
