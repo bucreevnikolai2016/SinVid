@@ -142,6 +142,7 @@ if (document.getElementById("demo2")) {
 document.getElementById('myRange2').max = vid.duration;
 var input = document.getElementById("demo2");
 var text = input.innerHTML;
+document.getElementById("demo2").innerHTML = vid.currentTime;
 } 
 }, 300);
 </script> 
@@ -210,13 +211,11 @@ if (p19 != p18) {
   if (p5 == 0) {
   vid.pause();
   vid.currentTime = p9;
-  document.getElementById("demo2").innerHTML = p9;
   document.getElementById('block').value = p18;
   } 
   if (p5 == 1) {
   vid.play();
   vid.currentTime = p9;
-  document.getElementById("demo2").innerHTML = p9;
   document.getElementById('block').value = p18;
   }
 }
