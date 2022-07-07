@@ -86,10 +86,6 @@ width: 300px;
   <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
   <p id="pp" style="display: none">Volume: <span id="demo" style="display: none"></span></p>
 </div>
-<div class="slidecontainer2" id="slidecontainer2">
-  <input type="range" min="0" max="" value="0" class="slider2" id="myRange2">
-  <p id="pp2" style="display: none">Volume: <span id="demo2" style="display: none"></span></p>
-</div>
 
 <video class="vid" id="vid" controls>
   <source src="http://stream.voidboost.cc/8/4/0/5/9/d3a04dc521b7401d0dfe445f476a6618:2022070722:NXJyZThLbFNyODdvRmpZck0wamVVUmZpR3ZPelM4d3NJMUFHc29DT2JiOEN1eG9LdThWbWZIdStvNzMyTmZ3ZUhPTFRFU2p4WEZ0MVFhSGg0aWhVb2ZGQm51Tkk2K05oeGp6dnRHeDNKdjA9/dviae.mp4" />
@@ -100,13 +96,10 @@ width: 300px;
 <input id="otpravka" style="display: none" name="otpravka" value=""/>   
 <input id="emylast" style="display: none" name="emylast" value=""/>
 <input id="timeotp" style="display: none" name="timeotp" value="0"/>  
-<input id="per" style="display: none" name="per" value="0"/> 
-<input id="pertime" style="display: none" name="pertime" value="0"/> 
 <input id="sinh" style="display: none" name="sinh" value="0"/> 
 <input id="massiv" style="display: none" name="massiv" value=""/> 
 <input id="block" style="display: none" name="block" value=""/> 
 <input id="play" style="display: none" name="play" value=""/> 
-<input id="not" style="display: none" name="not" value=""/> 
 
 <script>
 var slider = document.getElementById("myRange");
@@ -114,15 +107,6 @@ var output = document.getElementById("demo");
 output.innerHTML = slider.value;
 slider.oninput = function() {
 output.innerHTML = this.value;
-}
-</script>
-
-<script>
-var slider2 = document.getElementById("myRange2");
-var output2 = document.getElementById("demo2");
-output2.innerHTML = slider2.value;
-slider2.oninput = function() {
-output2.innerHTML = this.value;
 }
 </script>
 
@@ -135,16 +119,6 @@ var v1 = text / 100;
 vid.volume = v1; 
 } 
 }, 300);
-
-</script> 
-<script type="text/javascript">
-setInterval(function() {
-if (document.getElementById("demo2")) {
-document.getElementById('myRange2').max = vid.duration;
-document.getElementById("myRange2").value = Math.round(vid.currentTime);
-} 
-}, 1000);
-</script> 
 
 <script type="text/javascript">
 document.querySelector('#myButton1').addEventListener('click', function(){
@@ -211,42 +185,16 @@ if (p19 != p18) {
   vid.pause();
   vid.currentTime = p9;
   document.getElementById('block').value = p18;
-  document.getElementById('not').value = '1';
-  setTimeout(() => { document.getElementById('not').value = '0'; }, 100);
   } 
   if (p5 == 1) {
   vid.play();
   vid.currentTime = p9;
   document.getElementById('block').value = p18;
-  document.getElementById('not').value = '1';
-  setTimeout(() => { document.getElementById('not').value = '0'; }, 100);
   }
 }
 }
           }, 10);
-    </script> 
-	
-<script type="text/javascript"> 
-setInterval(function() { 
-if (document.getElementById('not').value != 1) {
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-async function delayedGreeting() {
-  var text = document.getElementById("myRange2").value;
-  var t1 = text;
-  await sleep(50);
-  var text = document.getElementById("myRange2").value;
-  var t2 = text;
-  var t3 = t1 - t2;
-  var t4 = Math.abs(t3);
-  var t5 = document.getElementById('pertime').value;
-  if (t4 > 5 & t5 == 0) {document.getElementById('per').value = '1';};
-}
-delayedGreeting();
-}
-}, 50);
-</script> 	
+    </script> 	
 	
 <script type="text/javascript">
 setInterval(function() {
@@ -270,8 +218,7 @@ var min = date.getMinutes() * 60 * 1000;
 var sec = date.getSeconds() * 1000;
 var milsec = date.getMilliseconds();
 var vrem = ch + min + sec + milsec;
-var text = document.getElementById("myRange2").value;	
-var t7 = text;
+var t7 = vid.currentTime;
 var t8 = document.getElementById('emylast').value;
 if (document.getElementById('timeotp').value == 0 & document.getElementById('massiv').value == 1) {
 var ottp = '1';
@@ -308,10 +255,7 @@ document.getElementById('massiv').value = '1';
 }
 document.getElementById('otpravka').value = '1';
 document.getElementById('emylast').value = t6;
-document.getElementById('pertime').value = '1';
-document.getElementById('per').value = '0';
 document.getElementById('sinh').value = '0';
-setTimeout(() => { document.getElementById('pertime').value = '0'; }, 50);
 }
 }
 }, 10);
