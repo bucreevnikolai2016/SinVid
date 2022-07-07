@@ -106,6 +106,7 @@ width: 300px;
 <input id="massiv" style="display: none" name="massiv" value=""/> 
 <input id="block" style="display: none" name="block" value=""/> 
 <input id="play" style="display: none" name="play" value=""/> 
+<input id="not" style="display: none" name="not" value=""/> 
 
 <script>
 var slider = document.getElementById("myRange");
@@ -212,11 +213,15 @@ if (p19 != p18) {
   vid.pause();
   vid.currentTime = p9;
   document.getElementById('block').value = p18;
+  document.getElementById('not').value = '1';
+  setTimeout(() => { document.getElementById('not').value = '0'; }, 100);
   } 
   if (p5 == 1) {
   vid.play();
   vid.currentTime = p9;
   document.getElementById('block').value = p18;
+  document.getElementById('not').value = '1';
+  setTimeout(() => { document.getElementById('not').value = '0'; }, 100);
   }
 }
 }
@@ -225,6 +230,7 @@ if (p19 != p18) {
 	
 <script type="text/javascript"> 
 setInterval(function() { 
+if (document.getElementById('not').value != 1) {
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -242,6 +248,7 @@ async function delayedGreeting() {
   if (t4 > 5 & t5 == 0) {document.getElementById('per').value = '1';};
 }
 delayedGreeting();
+}
 }, 50);
 </script> 	
 	
