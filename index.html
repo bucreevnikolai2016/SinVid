@@ -40,7 +40,6 @@ display : none;
 
 <div style="display: none" class="json" id="json">json here</div>
 
-<input id="ypr" style="display: none" name="ypr" value=""/> 
 <input id="otpravka" style="display: none" name="otpravka" value=""/>   
 <input id="emylast" style="display: none" name="emylast" value=""/>
 <input id="timeotp" style="display: none" name="timeotp" value="0"/>  
@@ -83,32 +82,26 @@ function myItems(jsonString){
 <script type="text/javascript">
   setInterval(function() {
 if (document.getElementById("json")) {
-  var p1 = json.firstElementChild;
-  var p2 = p1.firstElementChild;
-  var p3 = p2.lastElementChild;
-  var p4 = p3.lastElementChild;
-  var p5 = p4.innerHTML;
-  var p6 = p4.previousElementSibling;
-  var p9 = p6.innerHTML;
-  var p12 = p6.previousElementSibling;
-  var p13 = p12.previousElementSibling;
-  var p14 = p13.innerHTML;
-  if (vid.paused) {
-  var p10 = '0';
-  } else {
-  var p10 = '1';
-  }
-  var p11 = document.getElementById('ypr').value;
-  if (p10 != p5 || p9 != p11) {
+var p1 = json.firstElementChild;
+var p2 = p1.firstElementChild;
+var p3 = p2.lastElementChild;
+var p4 = p3.lastElementChild;
+var p5 = p4.innerHTML;
+var p6 = p4.previousElementSibling;
+var p9 = p6.innerHTML;
+var p12 = p3.previousElementSibling;
+var p13 = p12.lastElementChild;
+var p14 = p13.innerHTML;
+var p15 = p13.previousElementSibling;
+var p16 = p15.innerHTML;
+  if (p14 != p5 || p9 != p16) {
   if (p5 == 0) {
   vid.pause();
   vid.currentTime = p9;
-  document.getElementById('ypr').value = p9;
   } 
   if (p5 == 1) {
   vid.play();
   vid.currentTime = p9;
-  document.getElementById('ypr').value = p9;
   }
   }
 }
