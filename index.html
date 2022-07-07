@@ -54,6 +54,32 @@ color: white;
 font-size: 19px;
 cursor: pointer;
 }
+.sum {
+z-index: 90;
+position: absolute;
+left: 50px;
+top: 10px;
+width: 30px;
+height: 30px;
+background-color: #2F4F4F;
+border: none;
+color: white; 
+font-size: 19px;
+cursor: pointer;
+}
+.sub {
+z-index: 90;
+position: absolute;
+left: 50px;
+top: 10px;
+width: 30px;
+height: 30px;
+background-color: #2F4F4F;
+border: none;
+color: white; 
+font-size: 19px;
+cursor: pointer;
+}
 .slidecontainer {
 z-index: 90;
 position: absolute;
@@ -66,12 +92,21 @@ width: 70px;
 }
 </style>  	
 	
+<script>
+function mouseCoords(e) {
+document.getElementById("myButton1").style.display = '';
+document.getElementById("myButton2").style.display = '';
+document.getElementById("myRange").style.display = '';
+}
+</script>
 </head>
 	
-<body>
+<body onmousemove="mouseCoords(event)" class="staticrypt-body">
 
 <button class="myButton1" id="myButton1" type="button"><i class="fa fa-play" aria-hidden="true"></i></button>  
-<button class="myButton2" id="myButton2" type="button"><i class="fa fa-pause" aria-hidden="true"></i></button>  
+<button class="myButton2" id="myButton2" type="button"><i class="fa fa-pause" aria-hidden="true"></i></button> 
+<button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
+<button class="sub" id="sub" ><i class="fa fa-compress" aria-hidden="true"></i></button> 
 <div class="slidecontainer" id="slidecontainer">
   <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
   <p id="pp" style="display: none">Volume: <span id="demo" style="display: none"></span></p>
@@ -117,6 +152,23 @@ document.getElementById('play').value = '1';
 });
 document.querySelector('#myButton2').addEventListener('click', function(){
 document.getElementById('play').value = '0';
+});
+</script>
+
+<script>
+document.querySelector('#sum').addEventListener('click', function(){
+if(document.documentElement.webkitRequestFullscreen) {
+document.documentElement.webkitRequestFullscreen();
+} else {
+document.documentElement.mozRequestFullScreen();
+}
+});
+document.querySelector('#sub').addEventListener('click', function(){
+if(document.documentElement.webkitRequestFullscreen) {
+document.webkitCancelFullScreen()
+} else {
+document.mozCancelFullScreen();
+}
 });
 </script>
 	
