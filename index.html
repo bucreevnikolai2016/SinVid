@@ -141,11 +141,9 @@ vid.volume = v1;
 setInterval(function() {
 if (document.getElementById("demo2")) {
 document.getElementById('myRange2').max = vid.duration;
-var input = document.getElementById("demo2");
-var text = input.innerHTML;
 document.getElementById("myRange2").value = Math.round(vid.currentTime);
 } 
-}, 300);
+}, 1000);
 </script> 
 
 <script type="text/javascript">
