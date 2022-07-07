@@ -47,6 +47,7 @@ display : none;
 <input id="pertime" style="display: none" name="pertime" value="0"/> 
 <input id="sinh" style="display: none" name="sinh" value="0"/> 
 <input id="massiv" style="display: none" name="massiv" value=""/> 
+<input id="block" style="display: none" name="block" value=""/> 
 
 <script type="text/javascript">
     setInterval(function() { 
@@ -94,19 +95,23 @@ var p13 = p12.lastElementChild;
 var p14 = p13.innerHTML;
 var p15 = p13.previousElementSibling;
 var p16 = p15.innerHTML;
-	
-
-	
+var p17 = p6.previousElementSibling;
+var p18 = p17.innerHTML;	
+var p19 = document.getElementById('block').value;
+if (p19 != p18) {
   if (p14 != p5 || p9 != p16) {
   if (p5 == 0) {
   vid.pause();
   vid.currentTime = p9;
+  document.getElementById('block').value = p18;
   } 
   if (p5 == 1) {
   vid.play();
   vid.currentTime = p9;
+  document.getElementById('block').value = p18;
   }
   }
+}
 }
           }, 10);
     </script> 
