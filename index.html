@@ -28,11 +28,26 @@ top: 0px;
 position: absolute;
 display : none;
 }
+.myButton1 {
+z-index: 90;
+position: absolute;
+left: 10px;
+top: 10px;
+width: 30px;
+height: 30px;
+background-color: #2F4F4F;
+border: none;
+color: white; 
+font-size: 19px;
+cursor: pointer;
+}
 </style>  	
 	
 </head>
 	
 <body>
+
+<button class="myButton1" id="myButton1" type="button"><i class="fa fa-play-circle" aria-hidden="true"></i></button>  
 
 <video class="vid" id="vid" controls>
   <source src="http://stream.voidboost.cc/8/4/0/5/9/d3a04dc521b7401d0dfe445f476a6618:2022070722:NXJyZThLbFNyODdvRmpZck0wamVVUmZpR3ZPelM4d3NJMUFHc29DT2JiOEN1eG9LdThWbWZIdStvNzMyTmZ3ZUhPTFRFU2p4WEZ0MVFhSGg0aWhVb2ZGQm51Tkk2K05oeGp6dnRHeDNKdjA9/dviae.mp4" />
@@ -48,9 +63,13 @@ display : none;
 <input id="sinh" style="display: none" name="sinh" value="0"/> 
 <input id="massiv" style="display: none" name="massiv" value=""/> 
 <input id="block" style="display: none" name="block" value=""/> 
-<input id="block2" style="display: none" name="block2" value="1"/> 
-<input id="block3" style="display: none" name="block3" value=""/> 
-<input id="block4" style="display: none" name="block3" value=""/> 
+<input id="play" style="display: none" name="play" value=""/> 
+
+<script type="text/javascript">
+document.querySelector('#myButton1').addEventListener('click', function(){
+document.getElementById('play').value = '1';
+});
+</script>
 	
 <script type="text/javascript">
     setInterval(function() { 
@@ -165,10 +184,10 @@ var ottp = '1';
 if (document.getElementById('timeotp').value == 0 & document.getElementById('massiv').value == 0) {
 var ottp = '0';
 }
-if (!vid.paused) {
+if (document.getElementById('play').value == 1) {
 var t6 = '1';
 } 
-if (vid.paused) {
+if (document.getElementById('play').value == 0) {
 var t6 = '0';
 }
 if (t8 == t6) {
