@@ -146,16 +146,6 @@ var text = input.innerHTML;
 }, 300);
 </script> 
 
-<script>
-setInterval(function() {
-if (document.getElementById("demo2")) {
-if (document.getElementById('play').value == 1) {
-document.getElementById("demo2").innerHTML = document.getElementById("demo2").innerHTML + 1; 
-} 
-}
-}, 1000);
-</script>
-
 <script type="text/javascript">
 document.querySelector('#myButton1').addEventListener('click', function(){
 document.getElementById('play').value = '1';
@@ -220,11 +210,13 @@ if (p19 != p18) {
   if (p5 == 0) {
   vid.pause();
   vid.currentTime = p9;
+  document.getElementById("demo2").innerHTML = p9;
   document.getElementById('block').value = p18;
   } 
   if (p5 == 1) {
   vid.play();
   vid.currentTime = p9;
+  document.getElementById("demo2").innerHTML = p9;
   document.getElementById('block').value = p18;
   }
 }
