@@ -100,9 +100,7 @@ var p17 = p6.previousElementSibling;
 var p18 = p17.innerHTML;	
 var p19 = document.getElementById('block').value;
 var p20 = document.getElementById('block2').value;
-if (p20 != p18) {
-if (p19 != p18) {
-  if (p14 != p5 || p9 != p16) {
+if (p19 != p18 & p20 != p18) {
   if (p5 == 0) {
   vid.pause();
   vid.currentTime = p9;
@@ -113,8 +111,6 @@ if (p19 != p18) {
   vid.currentTime = p9;
   document.getElementById('block').value = p18;
   }
-  }
-}
 }
 }
           }, 10);
