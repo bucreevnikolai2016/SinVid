@@ -215,6 +215,7 @@ document.getElementById("pod").style.display = '';
 <input id="play" style="display: none" name="play" value=""/> 
 <input id="per" style="display: none" name="per" value="0"/> 
 <input id="pertime" style="display: none" name="pertime" value="0"/> 
+<input id="start" style="display: none" name="start" value="0"/> 
 	
 <script type="text/javascript">
 setInterval(function() {
@@ -412,9 +413,14 @@ setInterval(function() {
 document.getElementById('sinh').value = '1';
 }, 60000);
 </script>
+
+<script>
+setTimeout(() => { document.getElementById('start').value = '1'; }, 3000);
+</script>
 	
 <script type="text/javascript">
 setInterval(function() { 
+if (document.getElementById('start').value == 1) {
 var date = new Date();
 var ch = date.getHours() * 60 * 60 * 1000;
 var min = date.getMinutes() * 60 * 1000;
@@ -462,6 +468,7 @@ document.getElementById('sinh').value = '0';
 document.getElementById('pertime').value = '1';
 document.getElementById('per').value = '0';
 setTimeout(() => { document.getElementById('pertime').value = '0'; }, 50);
+}
 }
 }
 }, 10);
