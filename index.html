@@ -116,16 +116,45 @@ height: var(--sliderSize);
 background: #2F4F4F;
 cursor: pointer;
 }
+.slider::-moz-range-thumb {
+-webkit-appearance: none;
+appearance: none;
+border-radius: 50%;
+width: var(--sliderSize);
+height: var(--sliderSize);
+background: #2F4F4F;
+cursor: pointer;
+}
 .slidecontainer2 {
 z-index: 90;
 position: absolute;
-left: 170px;
-top: 15px;
+left: 0px;
+top: 3px;
 }
 .slider2 {
 z-index: 90;
 width: 1101px;
-height: 16px;
+height: 10px;
+left: 170px;
+top: 15px;
+}
+.slider2::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+border-radius: 50%;
+width: var(--sliderSize);
+height: var(--sliderSize);
+background: #2F4F4F;
+cursor: pointer;
+}
+.slider2::-moz-range-thumb {
+-webkit-appearance: none;
+appearance: none;
+border-radius: 50%;
+width: var(--sliderSize);
+height: var(--sliderSize);
+background: #2F4F4F;
+cursor: pointer;
 }
 .pod {
 z-index: 50;
@@ -514,14 +543,19 @@ document.getElementById("myRange").style.setProperty('--sliderSize', slider_polz
 	
 var slidecontainer2 = document.getElementById("slidecontainer2");
 var slider2 = document.getElementById("myRange2");
+var shir_slider_polz2 = shir_ok * (16 / 1366);
 var shir_slider2 = shir_ok * (1101 / 1366);
 var vis_slider2 = shir_slider2 * (16 / 1101);
 var left_slidecontainer2 = shir_ok * (170 / 1366);
-var top_slidecontainer2 = vis_vid * (15 / 768);
+var top_slidecontainer2 = vis_vid * (10 / 768);
+var top_slidecontainer3 = vis_vid * (3 / 768);
 slider2.style.width = shir_slider2 + "px";
 slider2.style.height = vis_slider2 + "px";
-slidecontainer2.style.left = left_slidecontainer2 + "px";
-slidecontainer2.style.top = top_slidecontainer2 + "px";
+slider2.style.left = left_slidecontainer2 + "px";
+slider2.style.top = top_slidecontainer2 + "px";
+slidecontainer2.style.top = top_slidecontainer3 + "px";
+var slider_polz2 = shir_slider_polz2 + "px";
+document.getElementById("myRange2").style.setProperty('--sliderSize', slider_polz2);
 	
 var pod = document.getElementById("pod");
 var shir_pod = shir_ok * (1366 / 1366);
