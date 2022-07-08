@@ -97,7 +97,7 @@ cursor: pointer;
 z-index: 90;
 position: absolute;
 left: 0px;
-top: 0px;
+top: 3px;
 }
 .slider {
 z-index: 90;
@@ -503,10 +503,12 @@ var shir_slider = shir_ok * (70 / 1366);
 var vis_slider = shir_slider * (10 / 70);
 var left_slidecontainer = shir_ok * (90 / 1366);
 var top_slidecontainer = vis_vid * (15 / 768);
+var top_slidecontainer2 = vis_vid * (3 / 768);
 slider.style.width = shir_slider + "px";
 slider.style.height = vis_slider + "px";
 slider.style.left = left_slidecontainer + "px";
 slider.style.top = top_slidecontainer + "px";
+slidecontainer.style.top = top_slidecontainer2 + "px";
 var slider_polz = shir_slider_polz + "px";
 document.getElementById("myRange").style.setProperty('--sliderSize', slider_polz);
 	
