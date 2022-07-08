@@ -116,7 +116,7 @@ width: 1366px;
 height: 50px;
 background-color: #000000;
 border: none;
-opacity: 0.9;
+opacity: 0.8;
 }
 </style>  	
 	
@@ -418,6 +418,94 @@ setTimeout(() => { document.getElementById('pertime').value = '0'; }, 50);
 }
 }, 10);
 </script>
+	
+<script type="text/javascript">
+setInterval(function() {
+var shir_ok = window.innerWidth;
+var vis_ok = window.innerHeight
+	
+var vid = document.getElementById("vid");
+var vis_vid = shir_ok / 1.77777777;
+vid.style.width = shir_ok + "px";
+vid.style.height = vis_vid + "px";
+
+var myButton1 = document.getElementById("myButton1");
+var shir_myButton1 = shir_ok * (30 / 1366);
+var vis_myButton1 = shir_myButton1;
+var shrift_myButton1 = 19 * (shir_ok / 1366);
+var left_myButton1 = shir_ok * (10 / 1366);
+var top_myButton1 = vis_vid * (10 / 768);
+myButton1.style.width = shir_myButton1 + "px";
+myButton1.style.height = vis_myButton1 + "px";
+myButton1.style.left = left_myButton1 + "px";
+myButton1.style.top = top_myButton1 + "px";
+myButton1.style.fontSize = shrift_myButton1 + "px";
+
+var myButton2 = document.getElementById("myButton2");
+var shir_myButton2 = shir_ok * (30 / 1366);
+var vis_myButton2 = shir_myButton2;
+var shrift_myButton2 = 19 * (shir_ok / 1366);
+var left_myButton2 = shir_ok * (50 / 1366);
+var top_myButton2 = vis_vid * (10 / 768);
+myButton2.style.width = shir_myButton2 + "px";
+myButton2.style.height = vis_myButton2 + "px";
+myButton2.style.left = left_myButton2 + "px";
+myButton2.style.top = top_myButton2 + "px";
+myButton2.style.fontSize = shrift_myButton2 + "px";
+	
+var sum = document.getElementById("sum");
+var shir_sum = shir_ok * (30 / 1366);
+var vis_sum = shir_sum;
+var shrift_sum = 19 * (shir_ok / 1366);
+var left_sum = shir_ok * (1286 / 1366);
+var top_sum = vis_vid * (10 / 768);
+sum.style.width = shir_sum + "px";
+sum.style.height = vis_sum + "px";
+sum.style.left = left_sum + "px";
+sum.style.top = top_sum + "px";
+sum.style.fontSize = shrift_sum + "px";
+	
+var sub = document.getElementById("sub");
+var shir_sub = shir_ok * (30 / 1366);
+var vis_sub = shir_sub;
+var shrift_sub = 19 * (shir_ok / 1366);
+var left_sub = shir_ok * (1326 / 1366);
+var top_sub = vis_vid * (10 / 768);
+sub.style.width = shir_sub + "px";
+sub.style.height = vis_sub + "px";
+sub.style.left = left_sub + "px";
+sub.style.top = top_sub + "px";
+sub.style.fontSize = shrift_sub + "px";
+	
+var slidecontainer = document.getElementById("slidecontainer");
+var slider = document.getElementById("myRange");
+var shir_slider = shir_ok * (70 / 1366);
+var left_slidecontainer = shir_ok * (90 / 1366);
+var top_slidecontainer = vis_vid * (15 / 768);
+slider.style.width = shir_slider + "px";
+slidecontainer.style.left = left_slidecontainer + "px";
+slidecontainer.style.top = top_slidecontainer + "px";
+	
+var slidecontainer2 = document.getElementById("slidecontainer2");
+var slider2 = document.getElementById("myRange2");
+var shir_slider2 = shir_ok * (1101 / 1366);
+var left_slidecontainer2 = shir_ok * (170 / 1366);
+var top_slidecontainer2 = vis_vid * (15 / 768);
+slider2.style.width = shir_slider2 + "px";
+slidecontainer2.style.left = left_slidecontainer2 + "px";
+slidecontainer2.style.top = top_slidecontainer2 + "px";
+	
+var pod = document.getElementById("pod");
+var shir_pod = shir_ok * (1366 / 1366);
+var vis_pod = shir_pod * (50 / 366);
+var left_pod = shir_ok * (0 / 1366);
+var top_pod = vis_vid * (0 / 768);
+pod.style.width = shir_pod + "px";
+pod.style.height = vis_pod + "px";
+pod.style.left = left_pod + "px";
+pod.style.top = top_pod + "px";
+}, 2000);
+</script> 
 
 </body>	
 	
