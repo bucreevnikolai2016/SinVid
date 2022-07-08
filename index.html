@@ -124,6 +124,10 @@ function mouseCoords(e) {
 document.getElementById("myButton1").style.display = '';
 document.getElementById("myButton2").style.display = '';
 document.getElementById("myRange").style.display = '';
+document.getElementById("myRange2").style.display = '';
+document.getElementById("sum").style.display = '';
+document.getElementById("sub").style.display = '';
+document.getElementById("pod").style.display = '';
 }
 </script>
 </head>
@@ -146,7 +150,7 @@ document.getElementById("myRange").style.display = '';
 
 <div class="pod" id="pod"></div>
 	
-<video class="vid" id="vid" controls>
+<video class="vid" id="vid">
   <source src="http://stream.voidboost.cc/8/4/0/5/9/920378cfc4dcaf9daec96d790fb7e569:2022070822:OWlZN05JOW9ibGZvTldvTTdReEowWGhKWEMxOTA3LzMzRWM5TjB0QUdXdnhBbWFLSVJNUWIyaFFrQm9NSXNwRkRRSnZRNlhRMUN1d2JRbmJ1anJqaCtnZzdGcnc5RVM1UFMrZVFMM1NmeXc9/4j9do.mp4" />
 </video> 
 
@@ -161,6 +165,31 @@ document.getElementById("myRange").style.display = '';
 <input id="play" style="display: none" name="play" value=""/> 
 <input id="per" style="display: none" name="per" value="0"/> 
 <input id="pertime" style="display: none" name="pertime" value="0"/> 
+	
+<script type="text/javascript">
+setInterval(function() {
+if (document.getElementById("myButton2")) {
+if (!vid.paused) {
+document.getElementById("myButton1").style.display = 'none';
+document.getElementById("myButton2").style.display = 'none';
+document.getElementById("myRange").style.display = 'none';
+document.getElementById("myRange2").style.display = 'none';
+document.getElementById("sum").style.display = 'none';
+document.getElementById("sub").style.display = 'none';
+document.getElementById("pod").style.display = 'none';
+} 
+if (vid.paused) {
+document.getElementById("myButton1").style.display = '';
+document.getElementById("myButton2").style.display = '';
+document.getElementById("myRange").style.display = '';
+document.getElementById("myRange2").style.display = '';
+document.getElementById("sum").style.display = '';
+document.getElementById("sub").style.display = '';
+document.getElementById("pod").style.display = '';
+}
+}
+}, 3000);
+</script>
 
 <script>
 var slider = document.getElementById("myRange");
