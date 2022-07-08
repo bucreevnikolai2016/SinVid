@@ -109,7 +109,6 @@ background-color: #DCDCDC;
 -webkit-appearance: none;
 appearance: none;
 border-radius: 50%;
-border: 30% solid #DCDCDC;
 width: var(--sliderSize);
 height: var(--sliderSize);
 background: #2F4F4F;
@@ -497,6 +496,7 @@ sub.style.fontSize = shrift_sub + "px";
 	
 var slidecontainer = document.getElementById("slidecontainer");
 var slider = document.getElementById("myRange");
+var shir_slider_polz = shir_ok * (16 / 1366);
 var shir_slider = shir_ok * (70 / 1366);
 var vis_slider = shir_slider * (10 / 70);
 var left_slidecontainer = shir_ok * (90 / 1366);
@@ -505,6 +505,7 @@ slider.style.width = shir_slider + "px";
 slider.style.height = vis_slider + "px";
 slidecontainer.style.left = left_slidecontainer + "px";
 slidecontainer.style.top = top_slidecontainer + "px";
+document.getElementById("myRange").style.setProperty('--sliderSize', shir_slider_polz);
 	
 var slidecontainer2 = document.getElementById("slidecontainer2");
 var slider2 = document.getElementById("myRange2");
