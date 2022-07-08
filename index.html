@@ -266,12 +266,16 @@ var p19 = document.getElementById('block').value;
 if (p19 != p18) {
   if (p5 == 0) {
   vid.pause();
+  document.getElementById('play').value = '0';
+  document.getElementById('emylast').value = '0';
   vid.currentTime = p9;
   document.getElementById("myRange2").value = p9;
   document.getElementById('block').value = p18;
   } 
   if (p5 == 1) {
   vid.play();
+  document.getElementById('play').value = '1';
+  document.getElementById('emylast').value = '1';
   vid.currentTime = p9;
   document.getElementById("myRange2").value = p9;
   document.getElementById('block').value = p18;
