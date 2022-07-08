@@ -96,6 +96,7 @@ top: 15px;
 .slider {
 z-index: 90;
 width: 70px;
+height: 16px;
 }
 .slidecontainer2 {
 z-index: 90;
@@ -106,6 +107,7 @@ top: 15px;
 .slider2 {
 z-index: 90;
 width: 1101px;
+height: 16px;
 }
 .pod {
 z-index: 50;
@@ -480,18 +482,22 @@ sub.style.fontSize = shrift_sub + "px";
 var slidecontainer = document.getElementById("slidecontainer");
 var slider = document.getElementById("myRange");
 var shir_slider = shir_ok * (70 / 1366);
+var vis_slider = shir_slider * (16 / 70);
 var left_slidecontainer = shir_ok * (90 / 1366);
 var top_slidecontainer = vis_vid * (15 / 768);
 slider.style.width = shir_slider + "px";
+slider.style.height = vis_slider + "px";
 slidecontainer.style.left = left_slidecontainer + "px";
 slidecontainer.style.top = top_slidecontainer + "px";
 	
 var slidecontainer2 = document.getElementById("slidecontainer2");
 var slider2 = document.getElementById("myRange2");
 var shir_slider2 = shir_ok * (1101 / 1366);
+var vis_slider2 = shir_slider2 * (16 / 1101);
 var left_slidecontainer2 = shir_ok * (170 / 1366);
 var top_slidecontainer2 = vis_vid * (15 / 768);
 slider2.style.width = shir_slider2 + "px";
+slider2.style.height = vis_slider2 + "px";
 slidecontainer2.style.left = left_slidecontainer2 + "px";
 slidecontainer2.style.top = top_slidecontainer2 + "px";
 	
