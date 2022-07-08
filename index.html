@@ -103,7 +103,6 @@ top: 15px;
 z-index: 90;
 width: 70px;
 height: 10px;
-background-color: #DCDCDC;
 }
 .slider::-webkit-slider-thumb {
 -webkit-appearance: none;
@@ -505,7 +504,8 @@ slider.style.width = shir_slider + "px";
 slider.style.height = vis_slider + "px";
 slidecontainer.style.left = left_slidecontainer + "px";
 slidecontainer.style.top = top_slidecontainer + "px";
-document.getElementById("myRange").style.setProperty('--sliderSize', shir_slider_polz);
+var slider_polz = shir_slider_polz + "px";
+document.getElementById("myRange").style.setProperty('--sliderSize', slider_polz);
 	
 var slidecontainer2 = document.getElementById("slidecontainer2");
 var slider2 = document.getElementById("myRange2");
