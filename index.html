@@ -269,6 +269,9 @@ if (p19 != p18) {
   document.getElementById('play').value = '0';
   document.getElementById('emylast').value = '0';
   vid.currentTime = p9;
+  document.getElementById('pertime').value = '1';
+  document.getElementById('per').value = '0';
+  setTimeout(() => { document.getElementById('pertime').value = '0'; }, 50);
   document.getElementById("myRange2").value = p9;
   document.getElementById('block').value = p18;
   } 
@@ -277,6 +280,9 @@ if (p19 != p18) {
   document.getElementById('play').value = '1';
   document.getElementById('emylast').value = '1';
   vid.currentTime = p9;
+  document.getElementById('pertime').value = '1';
+  document.getElementById('per').value = '0';
+  setTimeout(() => { document.getElementById('pertime').value = '0'; }, 50);
   document.getElementById("myRange2").value = p9;
   document.getElementById('block').value = p18;
   }
@@ -291,9 +297,9 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 async function delayedGreeting() {
-  var t1 = vid.currentTime;
+  var t1 = document.getElementById("myRange2").value;
   await sleep(50);
-  var t2 = vid.currentTime;
+  var t2 = document.getElementById("myRange2").value;
   var t3 = t1 - t2;
   var t4 = Math.abs(t3);
   var t5 = document.getElementById('pertime').value;
